@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Result Calculator | VIT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Student Result Calculator</h2>
+        <div class="input-group">
+            <input type="text" id="studentName" placeholder="Student Name">
+            <input type="text" id="rollNo" placeholder="Roll Number (e.g., 24PA1A05J2)">
+        </div>
+
+        <div class="marks-section">
+            <div class="subject">
+                <label>Subject 1:</label>
+                <input type="number" class="score" placeholder="Marks" max="100">
+            </div>
+            <div class="subject">
+                <label>Subject 2:</label>
+                <input type="number" class="score" placeholder="Marks" max="100">
+            </div>
+            <div class="subject">
+                <label>Subject 3:</label>
+                <input type="number" class="score" placeholder="Marks" max="100">
+            </div>
+        </div>
+
+        <button onclick="calculateResult()">Calculate Result</button>
+
+        <div id="resultDashboard" class="hidden">
+            <h3>Result Summary</h3>
+            <p>Total Marks: <span id="displayTotal">0</span>/300</p>
+            <p>Percentage: <span id="displayPercentage">0</span>%</p>
+            <p>Final Grade: <span id="displayGrade">-</span></p>
+            <p>Status: <b id="displayStatus">-</b></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
